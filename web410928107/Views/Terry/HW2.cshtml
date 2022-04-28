@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "HW2";
+}
+
+<h2>HW2</h2>
+
+@Html.TextBox("account", "text")
+<h3>register</h3>
+@using (Html.BeginForm("Action", "Controller", FormMethod.Post))
+{
+    <p>
+        Name @Html.TextBox("Name")
+    </p>
+    <p>
+        Account @Html.TextBox("Account")
+    </p>
+    <p>
+        Password @Html.Password("Password")
+    </p>
+    <p>
+        Introduce youself @Html.TextArea("Message", "", "5")
+    </p>
+    <p>
+        Gender @Html.RadioButton("gender", "boy")boy @Html.RadioButton("gender", "girl")girl
+    </p>
+}
