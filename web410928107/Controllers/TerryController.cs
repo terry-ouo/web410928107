@@ -21,5 +21,15 @@ namespace web410928107.Controllers
         {
             return View();
         }
+        public ActionResult HW3()
+        {
+            ViewBag.terry = "2";
+            ViewData["bob"] = "20";
+            return View();
+        }
+        public ActionResult test()
+        {
+            return View();
+        }
     }
 }
