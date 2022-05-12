@@ -15,17 +15,17 @@ namespace web410928107.Controllers
             {
                 ViewBag.NameMessage = "請輸入姓名";
             }
-            else if (string.IsNullOrWhiteSpace(account))
+            if (string.IsNullOrWhiteSpace(account))
             {
-                ViewBag.NameMessage = "請輸入帳號";
+                ViewBag.AccountMessage = "請輸入帳號";
             }
-            else if (string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(password))
             {
-                ViewBag.NameMessage = "請輸入密碼";
+                ViewBag.PasswordMessage = "請輸入密碼";
             }
-            else
+            if(!string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(account) && !string.IsNullOrWhiteSpace(password))
             {
-                ViewBag.NameMessage = "註冊成功";
+                ViewBag.Message = "註冊成功";
             }
             return View();
         }
