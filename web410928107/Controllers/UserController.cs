@@ -1,33 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using web410928107.ViewMpdels;
 
 namespace web410928107.Controllers
 {
     public class UserController : Controller
     {
-        // GET: User
-        public ActionResult Signup(string name, string account, string password)
+        public ActionResult SignUp()
         {
-            if (string.IsNullOrWhiteSpace(name))
+            return View(new SignUpData());
+        }
+        [HttpPost]
+        // GET: User
+        public ActionResult Signup(SignUpData data)
+        {
+            
+           
+            if(ModelState.IsValid)
             {
-                ViewBag.NameMessage = "請輸入姓名";
+                data.Message = "註冊成功";
             }
-            if (string.IsNullOrWhiteSpace(account))
-            {
-                ViewBag.AccountMessage = "請輸入帳號";
-            }
-            if (string.IsNullOrWhiteSpace(password))
-            {
-                ViewBag.PasswordMessage = "請輸入密碼";
-            }
-            if(!string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(account) && !string.IsNullOrWhiteSpace(password))
-            {
-                ViewBag.Message = "註冊成功";
-            }
-            return View();
+            return View(data);
         }
     }
 }
