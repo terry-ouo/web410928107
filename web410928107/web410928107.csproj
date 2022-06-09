@@ -232,6 +232,7 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\tes\Controllers\" />
@@ -239,7 +240,6 @@
     <Folder Include="Areas\tes\Views\Shared\" />
     <Folder Include="Data\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
